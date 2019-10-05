@@ -1,0 +1,39 @@
+{
+   "name": "AlanBlog",
+   "scripts": {
+      "dev": "nuxt"
+   },
+   "dependencies": {
+      "fs": "0.0.1-security",
+      "nuxt": "^2.9.2"
+   },
+   "config": {
+      "nuxt": {
+         "host": "localhost",
+         "port": 3001
+      }
+   },
+   "devDependencies": {
+      "@babel/cli": "^7.6.2",
+      "@babel/core": "^7.6.2",
+      "@babel/preset-env": "^7.6.2",
+      "@nuxtjs/axios": "^5.6.0",
+      "@nuxtjs/font-awesome": "^1.0.4",
+      "@nuxtjs/style-resources": "^1.0.0",
+      "babel-eslint": "^10.0.3",
+      "cookie-parser": "^1.4.4",
+      "eslint": "^6.4.0",
+      "eslint-config-standard": "^14.1.0",
+      "eslint-plugin-html": "^6.0.0",
+      "eslint-plugin-import": "^2.18.2",
+      "eslint-plugin-node": "^10.0.0",
+      "eslint-plugin-promise": "^4.2.1",
+      "eslint-plugin-standard": "^4.0.1",
+      "eslint-plugin-vue": "^5.2.3",
+      "file-loader": "^4.2.0",
+      "https": "^1.0.0",
+      "node-sass": "^4.12.0",
+      "sass-loader": "^8.0.0",
+      "url-loader": "^2.1.0"
+   }
+}

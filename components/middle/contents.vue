@@ -1,7 +1,7 @@
 <template>
   <div class="contents">
     <!-- <div class="carousel" style="height:250px;background-color:white"></div> -->
-    <div style="height:10px"></div>
+    <!-- <div style="height:10px"></div> -->
     <card></card>
     <div style="height:10px"></div>
     <card></card>

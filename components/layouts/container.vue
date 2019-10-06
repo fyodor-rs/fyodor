@@ -1,10 +1,10 @@
 <template>
   <div class="container">
     <nar-bar></nar-bar>
-    <div class="contents">
+    <!-- <div class="contents">
       <nuxt />
-    </div>
-    <!-- <contents></contents> -->
+    </div> -->
+    <contents></contents>
     <right-bar></right-bar>
   </div>
 </template>

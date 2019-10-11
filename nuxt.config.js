@@ -1,9 +1,14 @@
+
+
+const apiConfig=require('./config/api.config');
+const { isProdMode, isDevMode } = require('./environment')
+
 module.exports = {
     //判断是否为开发环境
-    dev: true,
+    dev: isDevMode,
     //该配置项用于定义应用客户端和服务端的环境变量。
     env: {
-        // baseUrl: process.env.BASE_URL || 'http://localhost:3000'
+        baseUrl: apiConfig.baseUrl
     },
     /*
      ** 可选值：‘spa’（没有服务端渲染），‘universal’（服务器端呈现+客户端路由导航）同构应用程序
@@ -29,7 +34,7 @@ module.exports = {
             {
                 hid: 'description',
                 name: 'description',
-                content: 'Nuxt.js project'
+                content: 'AlanLemon'
             }
         ],
     },

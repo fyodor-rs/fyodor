@@ -1,17 +1,22 @@
 {
    "name": "AlanBlog",
+   "version": "0.5.0",
+   "description": "Alan blog",
+   "author": {
+      "name": "Alan",
+      "email": "13544102930@163.com"
+   },
+   "license": "MIT",
    "scripts": {
-      "dev": "nuxt"
+      "dev": "nuxt",
+      "start": "cross-env NODE_ENV=development nodemon server/index",
+      "prod":"cross-env NODE_ENV=production nodemon server/index"
    },
    "dependencies": {
+      "cross-env": "^6.0.3",
+      "express": "^4.17.1",
       "fs": "0.0.1-security",
       "nuxt": "^2.9.2"
-   },
-   "config": {
-      "nuxt": {
-         "host": "localhost",
-         "port": 3001
-      }
    },
    "devDependencies": {
       "@babel/cli": "^7.6.2",
@@ -33,6 +38,7 @@
       "file-loader": "^4.2.0",
       "https": "^1.0.0",
       "node-sass": "^4.12.0",
+      "nodemon": "^1.19.3",
       "sass-loader": "^8.0.0",
       "url-loader": "^2.1.0"
    }

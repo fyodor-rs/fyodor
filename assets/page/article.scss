@@ -1,0 +1,19 @@
+.article-content{
+    width: 100%;
+    padding: 1.5em;
+    box-sizing: border-box;
+    background-color: white;
+      h4{
+       text-align: center;
+       margin-bottom: 1em
+    }
+}
+.article-content-body{
+    pre{
+      width: 80 !important
+    }
+    img{
+        width: 100% !important;
+        height: 15rem !important;
+    }
+}

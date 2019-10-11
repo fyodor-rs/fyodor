@@ -3,7 +3,6 @@
     <card 
      :key="article.id" 
      :article="article"
-     @click="toDetail(article)" 
      v-for="article in articles" 
      />
   </div>
@@ -24,7 +23,8 @@ export default {
   },
   methods:{
      toDetail(article){
-       this.$router.push(`/article/${article.id}`)
+       console.log(article._id);
+       this.$router.push(`/article/${article._id}`)
      }    
   }
 };

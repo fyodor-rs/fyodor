@@ -2,11 +2,13 @@
   <div class="card">
     <div class="card-content">
       <div class="card-img">
-        <img draggable="false" :src="image()" />
+        <nuxt-link :to="`/article/${article._id}`">
+          <img draggable="false" :src="image()" />
+        </nuxt-link>
       </div>
       <div class="card-article">
         <div class="card-article-title">
-          <nuxt-link to="/article">{{article.title}}</nuxt-link>
+          <nuxt-link :to="`/article/${article._id}`">{{article.title}}</nuxt-link>
         </div>
         <div class="card-article-description">{{article.describe}}</div>
         <div class="card-article-icons">
@@ -16,15 +18,15 @@
           </span>
           <span>
             <i class="fa fa-eye fa-fw"></i>
-            <span>56</span>
+            <span>0</span>
           </span>
           <span>
             <i class="fa fa-commenting fa-fw"></i>
-            <span>123</span>
+            <span>0</span>
           </span>
           <span>
             <i class="fa fa-heart fa-fw"></i>
-            <span>43</span>
+            <span>0</span>
           </span>
           <span>
             <i class="fa fa-bars fa-fw"></i>
@@ -37,18 +39,19 @@
 </template>
 <script>
 export default {
-  props:{
-    article:Object
+  props: {
+    article: Object
   },
-  computed:{
-  },
-  methods:{
-    format(time){
-      return new Date(time).toLocaleDateString()
+  computed: {},
+  methods: {
+    format(time) {
+      return new Date(time).toLocaleDateString();
     },
-    image(){
-      const content=JSON.parse(this.article.rawContent)
-      return content&&Object.keys(content.entityMap).length?content.entityMap[0].data.url:this.article.img
+    image() {
+      const content = JSON.parse(this.article.rawContent);
+      return content && Object.keys(content.entityMap).length
+        ? content.entityMap[0].data.url
+        : this.article.img;
     }
   }
 };
@@ -58,10 +61,11 @@ export default {
   background-color: white;
   width: 100%;
   height: 8.5em;
+  margin-bottom: 1em;
   @include css3-prefix(transition, background-color 0.5s);
   &:hover {
     background-color: rgb(219, 218, 218);
-    .card-content > .card-img > img {
+    img {
       @include css3-prefix(transform, translateX(-2px));
     }
   }

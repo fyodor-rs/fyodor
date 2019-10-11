@@ -3,4 +3,9 @@
   height: 50em;
   margin-left: 10.9em;
   float: left;
+  word-wrap:break-word;
+  word-break:break-all;
+  // overflow: hidden;
+  // text-overflow: ellipsis
+  // white-space:nowrap;强制不换行
 }

@@ -10,7 +10,7 @@
    "scripts": {
       "dev": "nuxt",
       "start": "cross-env NODE_ENV=development nodemon server/index",
-      "prod":"cross-env NODE_ENV=production nodemon server/index"
+      "prod": "cross-env NODE_ENV=production nodemon server/index"
    },
    "dependencies": {
       "cross-env": "^6.0.3",

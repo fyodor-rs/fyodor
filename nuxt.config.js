@@ -69,7 +69,7 @@ module.exports = {
         // 'bootstrap-vue/nuxt',
         '@nuxtjs/style-resources',
         '@nuxtjs/font-awesome',
-        '@nuxtjs/axios'
+        ['@nuxtjs/axios', { baseURL: apiConfig.baseUrl }]
     ],
     //路由配置
     router: {

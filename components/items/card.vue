@@ -2,17 +2,17 @@
   <div class="card">
     <div class="card-content">
       <div class="card-img">
-        <img draggable="false" :src="url" />
+        <img draggable="false" :src="image()" />
       </div>
       <div class="card-article">
         <div class="card-article-title">
-          <nuxt-link to="/article">标题</nuxt-link>
+          <nuxt-link to="/article">{{article.title}}</nuxt-link>
         </div>
-        <div class="card-article-description">内容...........</div>
+        <div class="card-article-description">{{article.describe}}</div>
         <div class="card-article-icons">
           <span>
             <i class="fa fa-clock-o fa-fw"></i>
-            <span>2019/10/01</span>
+            <span>{{new Date(article.createTime).toLocaleDateString()}}</span>
           </span>
           <span>
             <i class="fa fa-eye fa-fw"></i>
@@ -28,7 +28,7 @@
           </span>
           <span>
             <i class="fa fa-bars fa-fw"></i>
-            <span>标签</span>
+            <span>{{article.category}}</span>
           </span>
         </div>
       </div>
@@ -37,11 +37,19 @@
 </template>
 <script>
 export default {
-  data() {
-    return {
-      url:
-        "https://www.bing.com/th?id=OHR.ClavijoLandscape_ZH-CN1525245124_320x240.jpg&rf=LaDigue_1920x1080.jpg&pid=hp"
-    };
+  props:{
+    article:Object
+  },
+  computed:{
+  },
+  methods:{
+    format(time){
+      return new Date(time).toLocaleDateString()
+    },
+    image(){
+      const content=JSON.parse(this.article.rawContent)
+      return content&&Object.keys(content.entityMap).length?content.entityMap[0].data.url:this.article.img
+    }
   }
 };
 </script>
@@ -67,7 +75,7 @@ export default {
       width: 9.5em;
       img {
         height: 100%;
-        width: calc(9.5em+2px);
+        width: 100%;
         cursor: pointer;
         @include css3-prefix(transition, transform 0.5s);
       }

@@ -1,10 +1,10 @@
 <template>
   <div class="container">
     <nar-bar></nar-bar>
-    <!-- <div class="contents">
-      <nuxt />
-    </div> -->
-    <contents></contents>
+    <div class="contents">
+      <nuxt :nuxtChildKey="$route.name" keep-alive/>
+    </div>
+    <!-- <contents></contents> -->
     <right-bar></right-bar>
   </div>
 </template>

@@ -1,8 +1,11 @@
 <template>
   <div class="article-content" :style="{width:isExtend?52.7+'em':38+'em'}">
-    <h4>
+       <h4>
       {{content.title}}
-      <i @click="openPost()" :class="[isExtend?'fa fa-chevron-left fa-fw':'fa fa-chevron-right fa-fw']"></i>
+      <i
+        @click="openPost()"
+        :class="[isExtend?'fa fa-chevron-left fa-fw':'fa fa-chevron-right fa-fw']"
+      ></i>
     </h4>
     <div class="article-content-body" v-changeHtml="content.htmlContent"></div>
   </div>
@@ -18,8 +21,10 @@ export default {
       this.$store.commit("article/changeExendPost", !this.isExtend);
     }
   },
-  mounted(){
+  watch:{
+   $route(){
     this.$store.commit("article/changeExendPost", false);
+   }
   },
   computed: {
     content() {
@@ -53,22 +58,21 @@ export default {
     left: 47%;
     cursor: pointer;
   }
-}
-
-.article-content-body {
-  //  word-wrap:break-word;
-  // word-break:break-word;
-  // overflow: hidden;
-  // text-overflow: ellipsis
-  // white-space:nowrap;强制不换行
-  line-height: 2em;
-  font-size: 0.9em;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
-    "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial,
-    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" ;
-  img {
-    width: 100%;
-    height: 15rem;
+  .article-content-body {
+    //  word-wrap:break-word;
+    // word-break:break-word;
+    // overflow: hidden;
+    // text-overflow: ellipsis
+    // white-space:nowrap;强制不换行
+    line-height: 2em;
+    font-size: 0.9em;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+      "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial,
+      sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    img {
+      width: 100%;
+      height: 15rem;
+    }
   }
 }
 </style>

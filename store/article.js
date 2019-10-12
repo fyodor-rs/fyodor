@@ -7,11 +7,15 @@ export const state = () => {
         content:{
             fetching:false,
             data:null
-        }
+        },
+        isExtendPost:false
     }
 }
 
 export const mutations = {
+    changeExendPost(state, payload){
+        state.isExtendPost=payload
+    },
     updateList(state, payload) {
         state.list.data = payload
     },

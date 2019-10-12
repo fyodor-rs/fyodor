@@ -1,7 +1,7 @@
 <template>
   <div class="article-content">
     <h4>{{content.title}}</h4>
-    <div class="article-content-body" v-if="!fetching" v-html="content.htmlContent"></div>
+    <div class="article-content-body" v-html="content.htmlContent"></div>
   </div>
 </template>
 <script>

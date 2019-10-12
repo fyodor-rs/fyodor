@@ -4,7 +4,7 @@
       <transition-group key="list" name="fade" tag="div" v-if="articles && articles.length">
         <card :key="article._id" :article="article" v-for="article in articles" />
       </transition-group>
-      <div class="contents" v-else></div>
+      <div  class="emptyText" v-else></div>
     </transition>
   </div>
 </template>
@@ -26,3 +26,11 @@ export default {
   }
 };
 </script>
+<style lang="scss" scoped>
+.emptyText{
+     width: 100%;
+     text-align: center;
+     background-color: white;
+     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+</style>

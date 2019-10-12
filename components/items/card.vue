@@ -117,8 +117,13 @@ export default {
         font-size: 0.8em;
         height: 1.5rem;
         display: flex;
-        margin-right: 1.5em;
         justify-content: space-between;
+        span{
+          flex: 1
+        }
+        span:first-child{
+          flex: 2
+        }
       }
     }
   }

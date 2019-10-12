@@ -1,28 +1,46 @@
 export const state = () => {
     return {
-        list: [],
-        content:null
+        list: {
+            fetching:false,
+            data:[]
+        },
+        content:{
+            fetching:false,
+            data:null
+        }
     }
 }
 
 export const mutations = {
     updateList(state, payload) {
-        state.list = payload.data
+        state.list.data = payload
     },
     updateContent(state, payload) {
-        state.content = payload.data
+        state.content.data = payload
+    },
+    updateListFetch(state, payload) {
+        state.list.fetching = payload
+    },
+    updateContentFetch(state, payload) {
+        state.content.fetching = payload
     }
 }
 
 export const actions = {
-    async getArticleList(store) {
-        await this.$axios.$get('/post/list').then(res => {
-            store.commit('updateList', res)
+     getArticleList(store,payload) {
+        store.commit('updateListFetch',true)
+        store.commit('updateList',[])
+        const request=payload?this.$axios.$get('/post/list',{params:payload}):this.$axios.$get('/post/list')
+       return request.then(res => {
+            store.commit('updateList', res.data)
+            store.commit('updateListFetch', false)
         })
     },
-    async getArticleContent(store,payload) {
-        await this.$axios.$get(`/post/${payload.id}`).then(res => {
-            store.commit('updateContent', res)
+     getArticleContent(store,payload) {
+        store.commit('updateContentFetch',true)
+        return this.$axios.$get(`/post/${payload.id}`).then(res => {
+            store.commit('updateContent', res.data)
+            store.commit('updateContentFetch',false)
         })
     }
 }

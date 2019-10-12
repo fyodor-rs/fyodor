@@ -4,8 +4,8 @@
 <script>
 import ArticleList from "@/components/items/list";
 export default {
-   fetch({ store }) {
-     return  store.dispatch("article/getArticleList");
+   fetch({ store,params }) {
+     return  store.dispatch("article/getArticleList",{category:params.id});
   },
   components: {
     ArticleList

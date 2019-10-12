@@ -23,7 +23,7 @@ module.exports = {
      * 参考vue-meta
      */
     head: {
-        title: 'mynuxt',
+        title: 'AlanLemon',
         meta: [{
                 charset: 'utf-8'
             },

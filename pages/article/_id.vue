@@ -56,7 +56,9 @@ export default {
   i {
     position: relative;
     font-size: 0.5em;
-    left: 47%;
+    float: right;
+    margin-top: 0.5em;
+    margin-right: -2em;
     cursor: pointer;
   }
   .article-content-body {
@@ -72,7 +74,6 @@ export default {
       sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     img {
       width: 100%;
-      height: 15rem;
     }
   }
 }

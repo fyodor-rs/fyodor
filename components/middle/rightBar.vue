@@ -1,5 +1,5 @@
 <template>
-  <div v-if="!isExtend" class="right-bar" ><img :src="bingPic?bingPic[0].humanizeUrl:''" ></div>
+  <div v-if="!isExtend" class="right-bar" ><img draggable="false" :src="bingPic?bingPic[0].humanizeUrl:''" ></div>
 </template>
 <script>
 export default {

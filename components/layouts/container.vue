@@ -4,19 +4,17 @@
     <div class="contents">
       <nuxt :nuxtChildKey="$route.name" keep-alive />
     </div>
-    <!-- <contents></contents> -->
-    <right-bar></right-bar>
-    <!-- <div style="clear:both"></div> -->
+    <transition name="side" mode="out-in">
+       <right-bar></right-bar>
+    </transition>
   </div>
   
 </template>
 <script>
 import NarBar from "../middle/narBar";
-import contents from "../middle/contents";
 import RightBar from "../middle/rightBar";
 export default {
   components: {
-    contents,
     NarBar,
     RightBar
   }

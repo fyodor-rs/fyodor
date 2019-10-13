@@ -59,7 +59,8 @@ module.exports = {
      * 引入vue.js插件
      */
     plugins: [
-        '~/plugins/axios'
+        '~/plugins/axios',
+        '~/plugins/bingPic'
     ],
     /**
      * nuxt.js扩展

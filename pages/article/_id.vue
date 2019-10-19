@@ -3,11 +3,11 @@
        <h4>
       {{content.title}}
       <i
-        @click="openPost()"
+        @click="exendPost()"
         :class="[isExtend?'fa fa-chevron-left fa-fw':'fa fa-chevron-right fa-fw']"
       ></i>
     </h4>
-    <div class="article-content-body" v-changeHtml="content.htmlContent"></div>
+    <div class="article-content-body braft-output-content" v-changeHtml="content.htmlContent"></div>
   </div>
 </template>
 <script>
@@ -17,7 +17,7 @@ export default {
     return store.dispatch("article/getArticleContent", { id: params.id });
   },
   methods: {
-    openPost() {
+    exendPost() {
       this.$store.commit("article/changeExendPost", !this.isExtend);
     }
   },
@@ -72,9 +72,6 @@ export default {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
       "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial,
       sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    img {
-      width: 100%;
-    }
   }
 }
 </style>

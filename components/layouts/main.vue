@@ -1,6 +1,6 @@
 <template>
   <div >
-    <img id="main-img" src="https://www.bing.com/th?id=OHR.ClavijoLandscape_ZH-CN1525245124_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp" alt="Peach Blossom" />
+    <img id="main-img" src="@/assets/img/LofotenSurfing.jpg" />
     <header-view></header-view>
     <container-view></container-view>
     <footer-view></footer-view>

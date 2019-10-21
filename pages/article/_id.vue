@@ -1,13 +1,13 @@
 <template>
   <div class="article-content" :style="{width:isExtend?52.7+'em':38+'em'}">
-       <h4>
-      {{content.title}}
+    <h4>
+      {{content.title?content.title:''}}
       <i
         @click="exendPost()"
         :class="[isExtend?'fa fa-chevron-left fa-fw':'fa fa-chevron-right fa-fw']"
       ></i>
     </h4>
-    <div class="article-content-body braft-output-content" v-changeHtml="content.htmlContent"></div>
+    <div class="article-content-body braft-output-content" v-changeHtml="content.htmlContent?content.htmlContent:''"></div>
   </div>
 </template>
 <script>
@@ -21,10 +21,10 @@ export default {
       this.$store.commit("article/changeExendPost", !this.isExtend);
     }
   },
-  watch:{
-   $route(){
-    this.$store.commit("article/changeExendPost", false);
-   }
+  watch: {
+    $route() {
+      this.$store.commit("article/changeExendPost", false);
+    }
   },
   computed: {
     content() {

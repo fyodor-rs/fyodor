@@ -38,20 +38,26 @@
   </div>
 </template>
 <script>
+import logo from "@/assets/img/logo.jpg";
 export default {
   props: {
     article: Object
   },
-  computed: {},
+  computed: {
+    defaultPic() {
+      return logo;
+    }
+  },
   methods: {
-    format(time) {
-      return new Date(time).toLocaleDateString();
-    },
     image() {
       const content = JSON.parse(this.article.rawContent);
-      return content && Object.keys(content.entityMap).length
-        ? content.entityMap[0].data.url
-        : this.article.img;
+      if (content) {
+        return content.entityMap&&Object.keys(content.entityMap).length
+          ? content.entityMap[0].data.url
+          : this.defaultPic;
+      } else {
+        return this.defaultPic;
+      }
     }
   }
 };
@@ -119,11 +125,11 @@ export default {
         height: 1.5rem;
         display: flex;
         justify-content: space-between;
-        span{
-          flex: 1
+        span {
+          flex: 1;
         }
-        span:first-child{
-          flex: 2
+        span:first-child {
+          flex: 2;
         }
       }
     }

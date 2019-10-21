@@ -1,3 +1,4 @@
+import defaultPosts from '@/config/defaultPosts.js'
 export const state = () => {
     return {
         list: {
@@ -17,7 +18,7 @@ export const mutations = {
         state.isExtendPost=payload
     },
     updateList(state, payload) {
-        state.list.data = payload
+        state.list.data = payload.length?payload:defaultPosts
     },
     updateContent(state, payload) {
         state.content.data = payload

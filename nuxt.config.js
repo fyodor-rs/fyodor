@@ -60,7 +60,8 @@ module.exports = {
      */
     plugins: [
         '~/plugins/axios',
-        '~/plugins/bingPic'
+        '~/plugins/bingPic',
+        {src:'~/plugins/nprogress',ssr:false}
     ],
     /**
      * nuxt.js扩展

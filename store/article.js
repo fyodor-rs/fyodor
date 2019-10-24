@@ -34,7 +34,6 @@ export const mutations = {
 export const actions = {
      getArticleList(store,payload) {
         store.commit('updateListFetch',true)
-        store.commit('updateList',[])
         const request=payload?this.$axios.$get('/post/list',{params:payload}):this.$axios.$get('/post/list')
        return request.then(res => {
             store.commit('updateList', res.data)

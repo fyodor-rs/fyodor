@@ -4,7 +4,8 @@
   left: calc((100% - 65em) / 2);
   display: flex;
   flex-direction: column;
-  .nav-link {
+}
+ .nav-link {
     cursor: pointer;
     font-family: "SourceHanSansCN";
     display: flex;
@@ -21,12 +22,6 @@
       color: rgb(0, 153, 255);
     }
   }
-}
-.link-class {
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 0.1em;
-  color: rgb(0, 153, 255);
-}
 .space {
   margin-right: 0.8em;
 }

@@ -48,7 +48,7 @@ export default {
   padding: 1.5em 2.5em;
   box-sizing: border-box;
   background-color: white;
-  transition: width 0.5s;
+  @include css3-prefix(transition, width 0.5s);
   h4 {
     text-align: center;
     margin-bottom: 1em;

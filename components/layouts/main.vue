@@ -1,6 +1,7 @@
 <template>
   <div >
-    <img id="main-img" src="@/assets/img/LofotenSurfing.jpg" />
+    <!-- <img id="main-img" src="@/assets/img/LofotenSurfing.jpg" /> -->
+    <div id="main-img"  />
     <header-view></header-view>
     <container-view></container-view>
     <footer-view></footer-view>

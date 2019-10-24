@@ -4,9 +4,9 @@
     <div class="contents">
       <nuxt :nuxtChildKey="$route.name" keep-alive />
     </div>
-    <transition name="side" mode="out-in">
+    <!-- <transition name="side" mode="out-in"> -->
        <right-bar></right-bar>
-    </transition>
+    <!-- </transition> -->
   </div>
   
 </template>

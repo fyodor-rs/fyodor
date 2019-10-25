@@ -2,13 +2,12 @@
   <div class="container">
     <nar-bar></nar-bar>
     <div class="contents">
-      <nuxt :nuxtChildKey="$route.name" keep-alive />
+      <transition name="fade" mode="out-in">
+        <nuxt />
+      </transition>
     </div>
-    <!-- <transition name="side" mode="out-in"> -->
-       <right-bar></right-bar>
-    <!-- </transition> -->
+    <right-bar></right-bar>
   </div>
-  
 </template>
 <script>
 import NarBar from "../middle/narBar";

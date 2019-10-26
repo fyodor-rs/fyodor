@@ -47,7 +47,7 @@ export default {
   width: 100%;
   padding: 1.5em 2.5em;
   box-sizing: border-box;
-  background-color: white;
+  background-color: rgb(243, 243, 243);
   @include css3-prefix(transition, width 0.5s);
   h4 {
     text-align: center;

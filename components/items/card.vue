@@ -64,7 +64,7 @@ export default {
 </script>
 <style lang="scss" scope>
 .card {
-  background-color: rgb(240, 240, 240);
+  background-color: rgb(243, 243, 243);
   font-family: "FontAwesome";
   width: 100%;
   height: 8.5em;

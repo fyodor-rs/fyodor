@@ -21,10 +21,14 @@ export default {
       this.$store.commit("article/changeExendPost", !this.isExtend);
     }
   },
-  watch: {
-    $route() {
-      this.$store.commit("article/changeExendPost", false);
-    }
+  // watch: {
+  //   $route() {
+  //     this.$store.commit("article/changeExendPost", false);
+  //   }
+  // },
+  beforeRouteLeave(to,from,next){
+     this.$store.commit("article/changeExendPost", false);
+     next()
   },
   computed: {
     content() {
@@ -71,6 +75,10 @@ export default {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
       "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial,
       sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    video,iframe{
+      width: 100%;
+      height: 400px;
+    }
   }
 }
 </style>

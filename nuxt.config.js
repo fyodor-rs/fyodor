@@ -75,7 +75,10 @@ module.exports = {
     ],
     //路由配置
     router: {
-        linkActiveClass: "link-class"
+        linkActiveClass: "link-class",
+        scrollBehavior (to, from, savedPosition) {
+            return { x: 0, y: 0 }
+        }
     }
 
 }

@@ -1,5 +1,5 @@
 <template>
-  <div v-if="!isExtend" class="right-bar">
+  <div  class="right-bar" :style="{width:isExtend?0+'em':14.7+'em'}">
     <img draggable="false" :src="bingPic" />
   </div>
 </template>

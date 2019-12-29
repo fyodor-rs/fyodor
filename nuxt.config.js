@@ -43,7 +43,7 @@ module.exports = {
      * 类型： Boolean 或 Object 或 String
      */
     loading: {
-        color: '#fff'
+        color: 'gray'
     },
       //与css区别在于，不能实际样式，只能导入变量，minxins，函数等
     styleResources: {
@@ -70,7 +70,7 @@ module.exports = {
         // Doc: https://bootstrap-vue.js.org/docs/
         // 'bootstrap-vue/nuxt',
         '@nuxtjs/style-resources',
-        '@nuxtjs/font-awesome',
+        // '@nuxtjs/font-awesome',
         ['@nuxtjs/axios', { baseURL: apiConfig.baseUrl }]
     ],
     //路由配置

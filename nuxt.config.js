@@ -70,7 +70,7 @@ module.exports = {
         // Doc: https://bootstrap-vue.js.org/docs/
         // 'bootstrap-vue/nuxt',
         '@nuxtjs/style-resources',
-        // '@nuxtjs/font-awesome',
+        '@nuxtjs/font-awesome',
         ['@nuxtjs/axios', { baseURL: apiConfig.baseUrl }]
     ],
     //路由配置

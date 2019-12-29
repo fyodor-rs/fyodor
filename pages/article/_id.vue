@@ -28,10 +28,9 @@ export default {
   },
   computed: {
     content() {
-      return this.$store.state.article.content.data;
+      return this.$store.state.article.content;
     },
     ...mapState({
-      fetching: state => state.article.content.fetching,
       isExtend: state => state.article.isExtendPost
     })
   },

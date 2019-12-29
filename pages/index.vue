@@ -2,17 +2,17 @@
   <article-list :articles="articles" />
 </template>
 <script>
-import ArticleList from "@/components/items/list";
+import articleList from "@/components/items/list";
 export default {
    fetch({ store }) {
      return  store.dispatch("article/getArticleList");
   },
   components: {
-    ArticleList
+    articleList
   },
   computed: {
     articles() {
-      return this.$store.state.article.list.data;
+      return this.$store.state.article.list;
     }
   }
 };

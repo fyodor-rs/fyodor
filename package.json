@@ -16,6 +16,7 @@
       "cross-env": "^6.0.3",
       "express": "^4.17.1",
       "fs": "0.0.1-security",
+      "nprogress": "^0.2.0",
       "nuxt": "^2.9.2"
    },
    "devDependencies": {

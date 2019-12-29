@@ -2,10 +2,14 @@
 
 export default function({$axios}){
     $axios.onRequest(config=>{
-    //     console.log(234234234);
-    //    console.log(config);
     });
     $axios.onRequestError(err=>{
-        console.log(err);
+    });
+    $axios.onResponse(data => {
+    })
+    //接口500无法访问，错误拦截
+    $axios.onResponseError(error => {
+    })
+    $axios.onError(error => {
     })
 }

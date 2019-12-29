@@ -59,8 +59,8 @@ module.exports = {
      * 引入vue.js插件
      */
     plugins: [
-        '~/plugins/axios',
-        '~/plugins/bingPic',
+        {src:'~/plugins/axios'},
+        // {src:'~/plugins/bingPic'},
         {src:'~/plugins/nprogress',ssr:false}
     ],
     /**

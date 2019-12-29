@@ -18,7 +18,7 @@ export const mutations = {
         state.isExtendPost=payload
     },
     updateList(state, payload) {
-        state.list.data = payload.length?payload:defaultPosts
+        state.list.data = payload&&payload.length?payload:defaultPosts
     },
     updateContent(state, payload) {
         state.content.data = payload
@@ -38,13 +38,17 @@ export const actions = {
        return request.then(res => {
             store.commit('updateList', res.data)
             store.commit('updateListFetch', false)
-        })
+        }).catch(res=>{
+            store.commit('updateList', null)
+         });
     },
      getArticleContent(store,payload) {
         store.commit('updateContentFetch',true)
         return this.$axios.$get(`/post/${payload.id}`).then(res => {
             store.commit('updateContent', res.data)
             store.commit('updateContentFetch',false)
-        })
+        }).catch(res=>{
+            store.commit('updateContent', {})
+         });
     }
 }

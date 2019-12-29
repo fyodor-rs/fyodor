@@ -8,7 +8,7 @@ app.use(nuxt.render)
 const port=environment.PORT || 3000
 const host=environment.HOST || '127.0.0.1'
 function listen() {
-    app.listen(port, host)
+    app.listen(port)
     const envText=isDevMode?'开发环境':'生产环境'
     console.log(`${envText}启动成功! Server listening on ${host}:${port}, at ${new Date().toLocaleString()}`)
   }

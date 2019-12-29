@@ -1,19 +1,27 @@
 <template>
-  <div v-if="!isExtend" class="right-bar" ><img draggable="false" :src="bingPic?bingPic[0].humanizeUrl:defaultPic" ></div>
+  <div v-if="!isExtend" class="right-bar">
+    <img draggable="false" :src="bingPic" />
+  </div>
 </template>
 <script>
-import logo from "@/assets/img/logo.jpg"
+import logo from "@/assets/img/Wachsenburg.jpg";
 export default {
+  data(){
+    return{
+      bingPic:logo
+    }
+  },
   computed: {
     isExtend() {
       return this.$store.state.article.isExtendPost;
-    },
-    bingPic() {
-      return this.$getBingPic()&&this.$getBingPic().success?this.$getBingPic().data:null
-    },
-    defaultPic(){
-      return logo
     }
+  },
+  mounted(){
+    this.$axios.$get('/wallpapper').then(res => {
+        this.bingPic=res?res.data[0].humanizeUrl:logo
+    }).catch(err => {
+       console.log(err);
+    })
   }
 };
 </script>

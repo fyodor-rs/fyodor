@@ -48,8 +48,9 @@ export default {
 <style lang="scss" >
 .article-content {
   width: 100%;
-  padding: 1.5em 2.5em;
+  padding: 1.5em 2em;
   box-sizing: border-box;
+  border-radius: 10px;
   background-color: rgb(243, 243, 243);
   @include css3-prefix(transition, width 0.5s);
   h4 {
@@ -65,10 +66,11 @@ export default {
     cursor: pointer;
   }
   .article-content-body {
+    //单词断句
     //  word-wrap:break-word;
-    // word-break:break-word;
+    word-break:break-all;//推荐，简单粗暴
     // overflow: hidden;
-    // text-overflow: ellipsis
+    text-overflow: ellipsis;//超过文本显示...
     // white-space:nowrap;强制不换行
     line-height: 2em;
     font-size: 0.9em;
@@ -78,6 +80,10 @@ export default {
     video,iframe{
       width: 100%;
       height: 400px;
+    };
+    img{
+      width: 100% !important;
+      height: 300px !important;
     }
   }
 }

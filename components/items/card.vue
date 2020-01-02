@@ -84,7 +84,7 @@ export default {
       float: left;
       overflow: hidden;
       height: 100%;
-      width: 9.5em;
+      width: 10em;
       img {
         height: 100%;
         width: 100%;
@@ -95,27 +95,29 @@ export default {
     .card-article {
       height: 100%;
       float: right;
-      width: 26.6em;
+      width: 26em;
+      color: #555;
       .card-article-title {
         cursor: pointer;
-        font-size: 1em;
+        font-size: 0.9em;
+        font-weight: 600;
         height: 2rem;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
         a {
-          @include css3-prefix(transition, margin-left 0.5s);
-          color: black;
+          @include css3-prefix(transition, margin-left 0.25s linear);
+          color: #555;
           &:hover {
-            color: gray;
-            text-decoration: underline;
+            color: black;
+            // text-decoration: underline;
             margin-left: 0.5em;
           }
         }
       }
       .card-article-description {
         font-size: 0.8em;
-        height: 4rem;
+        height: 4.3rem;
         cursor: pointer;
         // white-space:nowrap;
         overflow: hidden;
@@ -123,11 +125,15 @@ export default {
       }
       .card-article-icons {
         font-size: 0.8em;
-        height: 1.5rem;
+        // height: 1.3rem;
         display: flex;
         justify-content: space-between;
         span {
           flex: 1;
+          span{
+            font-size: 0.6em;
+            font-weight: 400
+          }
         }
         span:first-child {
           flex: 2;

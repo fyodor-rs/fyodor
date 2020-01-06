@@ -1,5 +1,6 @@
 <template>
-  <div class="article-content" :style="{width:isExtend?52.7+'em':38+'em'}">
+  <div class="article">
+    <div class="article-content" :style="{width:isExtend?52.7+'em':38+'em'}">
     <h4>
       {{content.title?content.title:''}}
       <i
@@ -9,10 +10,19 @@
     </h4>
     <div class="article-content-body braft-output-content" v-changeHtml="content.htmlContent?content.htmlContent:''"></div>
   </div>
+  <share></share>
+  <comment></comment>
+  </div>
 </template>
 <script>
 import { mapState } from "vuex";
+import share from "@/components/widgets/share"
+import comment from "@/components/items/comment"
 export default {
+  components:{
+    share,
+    comment
+  },
   fetch({ store, params }) {
     return store.dispatch("article/getArticleContent", { id: params.id });
   },
@@ -38,6 +48,11 @@ export default {
       isExtend: state => state.article.isExtendPost
     })
   },
+  mounted(){
+    // var test=document.getElementsByTagName('video');
+    // test[0].style.height='300px'
+    // console.log(test);
+  },
   directives: {
     changeHtml: (el, binding) => {
       el.innerHTML = binding.value;
@@ -46,11 +61,13 @@ export default {
 };
 </script>
 <style lang="scss" >
-.article-content {
+.article{
+  width: 100%;
+  .article-content {
   width: 100%;
   padding: 1.5em 2em;
   box-sizing: border-box;
-  border-radius: 10px;
+  // border-radius: 10px;
   background-color: rgb(243, 243, 243);
   @include css3-prefix(transition, width 0.5s);
   h4 {
@@ -79,7 +96,9 @@ export default {
       sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     video,iframe{
       width: 100%;
-      height: 400px;
+    };
+    iframe{
+       height: 400px;
     };
     img{
       width: 100% !important;
@@ -87,4 +106,6 @@ export default {
     }
   }
 }
+}
+
 </style>

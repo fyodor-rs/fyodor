@@ -53,7 +53,8 @@ export default {
       const content = JSON.parse(this.article.rawContent);
       if (content&&content.entityMap) {
         return Object.keys(content.entityMap).length&&
-        content.entityMap[0].data.url.indexOf('http')==0
+        content.entityMap[0].data.url.indexOf('http')==0&&
+        content.entityMap[0].data.type!=='VIDEO'
           ? content.entityMap[0].data.url
           : this.defaultPic;
       } else {

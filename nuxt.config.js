@@ -23,7 +23,7 @@ module.exports = {
      * 参考vue-meta
      */
     head: {
-        title: 'AlanLemon',
+        title: 'Fyodor',
         meta: [{
                 charset: 'utf-8'
             },
@@ -34,7 +34,7 @@ module.exports = {
             {
                 hid: 'description',
                 name: 'description',
-                content: 'AlanLemon'
+                content: 'Fyodor'
             }
         ],
     },

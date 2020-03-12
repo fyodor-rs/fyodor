@@ -10,8 +10,8 @@
     </h4>
     <div class="article-content-body braft-output-content" v-changeHtml="content.htmlContent?content.htmlContent:''"></div>
   </div>
-  <share></share>
-  <comment></comment>
+  <!-- <share></share> -->
+  <!-- <comment></comment> -->
   </div>
 </template>
 <script>

@@ -1,10 +1,9 @@
 <template>
   <div class="card">
+<nuxt-link :to="`/article/${article._id}`">
     <div class="card-content">
       <div class="card-img">
-        <nuxt-link :to="`/article/${article._id}`">
           <img draggable="false" :src="image()" />
-        </nuxt-link>
       </div>
       <div class="card-article">
         <div class="card-article-title">
@@ -35,6 +34,7 @@
         </div>
       </div>
     </div>
+</nuxt-link>
   </div>
 </template>
 <script>

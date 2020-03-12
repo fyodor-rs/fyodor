@@ -12,7 +12,8 @@ export const mutations = {
         state.isExtendPost=payload
     },
     updateList(state, payload) {
-        state.list = payload&&payload.length?payload:defaultPosts
+        // state.list = payload&&payload.length?payload:defaultPosts
+        state.list = payload
     },
     updateContent(state, payload) {
         state.content = payload

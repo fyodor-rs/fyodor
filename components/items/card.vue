@@ -67,10 +67,10 @@ export default {
 <style lang="scss" scope>
 .card {
   background-color: rgb(243, 243, 243);
-  font-family: "FontAwesome";
+  font-family: "SourceHanSansCN";
   width: 100%;
-  height: 8.5em;
-  margin-bottom: 1em;
+  height: 8.5rem;
+  margin-bottom: 1rem;
   @include css3-prefix(transition, background-color 0.5s);
   &:hover {
     background-color: rgb(219, 218, 218);
@@ -79,13 +79,13 @@ export default {
     }
   }
   .card-content {
-    padding: 0.5em;
-    height: 7.5em;
+    padding: 0.5rem;
+    height: 7.5rem;
     .card-img {
       float: left;
       overflow: hidden;
       height: 100%;
-      width: 10em;
+      width: 10rem;
       img {
         height: 100%;
         width: 100%;
@@ -96,11 +96,11 @@ export default {
     .card-article {
       height: 100%;
       float: right;
-      width: 26em;
+      width: 26rem;
       color: #555;
       .card-article-title {
         cursor: pointer;
-        font-size: 0.9em;
+        font-size: 0.8rem;
         font-weight: 600;
         height: 2rem;
         white-space: nowrap;
@@ -112,12 +112,12 @@ export default {
           &:hover {
             color: black;
             // text-decoration: underline;
-            margin-left: 0.5em;
+            margin-left: 0.5rem;
           }
         }
       }
       .card-article-description {
-        font-size: 0.8em;
+        font-size: 0.8rem;
         height: 4.3rem;
         cursor: pointer;
         // white-space:nowrap;
@@ -125,14 +125,15 @@ export default {
         text-overflow: ellipsis;
       }
       .card-article-icons {
-        font-size: 0.8em;
+        font-size: 0.7rem;
         // height: 1.3rem;
+        font-family: "fontawesome";
         display: flex;
         justify-content: space-between;
         span {
           flex: 1;
           span{
-            font-size: 0.6em;
+            font-size: 0.6rem;
             font-weight: 400
           }
         }

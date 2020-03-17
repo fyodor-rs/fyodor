@@ -19,7 +19,7 @@
       <i class="fa fa-music fa-fw space"></i>音乐
     </nuxt-link>
     <nuxt-link to="/category/map" class="nav-link">
-      <i class="fa fa-map-marker fa-fw space"></i>地图
+      <i class="fa fa-map-marker fa-fw space"></i>动画
     </nuxt-link>
     <nuxt-link to="/category/about" class="nav-link">
       <i class="fa fa-cog fa-fw space"></i>关于

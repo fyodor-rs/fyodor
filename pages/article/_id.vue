@@ -9,9 +9,10 @@
       ></i>
     </h4>
     <div class="article-content-body braft-output-content" v-changeHtml="content.htmlContent?content.htmlContent:''"></div>
+    <share></share>
+    <comment></comment>
   </div>
-  <!-- <share></share> -->
-  <!-- <comment></comment> -->
+  
   </div>
 </template>
 <script>
@@ -31,11 +32,6 @@ export default {
       this.$store.commit("article/changeExendPost", !this.isExtend);
     }
   },
-  // watch: {
-  //   $route() {
-  //     this.$store.commit("article/changeExendPost", false);
-  //   }
-  // },
   beforeRouteLeave(to,from,next){
      this.$store.commit("article/changeExendPost", false);
      next()
@@ -47,11 +43,6 @@ export default {
     ...mapState({
       isExtend: state => state.article.isExtendPost
     })
-  },
-  mounted(){
-    // var test=document.getElementsByTagName('video');
-    // test[0].style.height='300px'
-    // console.log(test);
   },
   directives: {
     changeHtml: (el, binding) => {
@@ -73,6 +64,7 @@ export default {
   h4 {
     text-align: center;
     margin-bottom: 1em;
+    font-family: "SourceHanSansCN";
   }
   i {
     position: relative;

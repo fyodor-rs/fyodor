@@ -16,8 +16,8 @@
     // height: 400px;
     box-sizing: border-box;
     background-color: rgb(243, 243, 243);
-    padding: 15px;
-    margin-top: 15px;
+    // padding: 15px;
+    // margin-top: 15px;
    .comment-header{
       width: 100%;
       height: 40px;

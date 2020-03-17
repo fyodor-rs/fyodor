@@ -34,7 +34,7 @@ module.exports = {
             {
                 hid: 'description',
                 name: 'description',
-                content: 'Fyodor'
+                content: 'fyodor'
             }
         ],
     },

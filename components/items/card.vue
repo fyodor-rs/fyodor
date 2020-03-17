@@ -127,7 +127,6 @@ export default {
       .card-article-icons {
         font-size: 0.7rem;
         // height: 1.3rem;
-        font-family: "fontawesome";
         display: flex;
         justify-content: space-between;
         span {

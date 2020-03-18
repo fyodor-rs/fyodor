@@ -24,9 +24,9 @@ export default {
   background-color: rgba(243, 243, 243, 0.5);
   font-family: "SourceHanSansCN";
   width: 100%;
-  height: 3em;
+  height: 3rem;
   text-align: center;
-  line-height: 3em;
-  font-size: 0.8em;
+  line-height: 3rem;
+  font-size: 0.8rem;
 }
 </style>

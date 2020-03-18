@@ -24,19 +24,10 @@ module.exports = {
      */
     head: {
         title: 'Fyodor',
-        meta: [{
-                charset: 'utf-8'
-            },
-            {
-                name: 'viewport',
-                content: 'width=device-width, initial-scale=1.0,user-scaleable=no'
-            },
-            {
-                hid: 'description',
-                name: 'description',
-                content: 'fyodor'
-            }
-        ],
+        meta: [
+            { charset: 'utf-8' },
+            { name: 'viewport', content: 'width=device-width,initial-scale=1.0,user-scalable=no'}
+        ]
     },
     /**
      * 加载进度条
@@ -60,8 +51,7 @@ module.exports = {
      */
     plugins: [
         {src:'~/plugins/axios'},
-        // {src:'~/plugins/bingPic'},
-        {src:'~/plugins/nprogress',ssr:false}
+        {src:'~/plugins/nprogress'}
     ],
     /**
      * nuxt.js扩展

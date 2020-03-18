@@ -1,3 +1,5 @@
 <template>
-    <div class="footer"></div>
+  <footer
+    class="footer"
+  >© 2020 Fyodor&ensp;|&ensp;Powered By Express、Nuxt.js&ensp;|&ensp;Rss&ensp;|&ensp;About</footer>
 </template>

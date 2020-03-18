@@ -1,10 +1,10 @@
 .right-bar {
-  width: 14.7em;
-  height: 50em;
+  width: 14.7rem;
+  // height: 50em;
   float: right;
   @include css3-prefix(transition, width 0.5s);
   img{
-    opacity: 0.5;
+    // opacity: 0.5;
     height: 100%;
     float: left;
   }

@@ -1,5 +1,5 @@
 <template>
-  <div  class="right-bar" :style="{width:isExtend?0+'em':14.7+'em'}">
+  <div  class="right-bar" :style="{width:isExtend?0+'rem':14.7+'rem'}">
     <img draggable="false" :src="bingPic" />
   </div>
 </template>

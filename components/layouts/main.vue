@@ -1,5 +1,5 @@
 <template>
-  <div >
+  <div class="app-main">
     <!-- <img id="main-img" src="@/assets/img/LofotenSurfing.jpg" /> -->
     <div id="main-img"  />
     <header-view></header-view>

@@ -1,6 +1,6 @@
 <template>
   <div class="article">
-    <div class="article-content" :style="{width:isExtend?52.7+'em':38+'em'}">
+    <div class="article-content" :style="{width:isExtend?52.7+'rem':38+'rem'}">
     <h4>
       {{content.title?content.title:''}}
       <i
@@ -56,22 +56,22 @@ export default {
   width: 100%;
   .article-content {
   width: 100%;
-  padding: 1.5em 2em;
+  padding: 1.5rem 2rem;
   box-sizing: border-box;
   // border-radius: 10px;
   background-color: rgb(243, 243, 243);
   @include css3-prefix(transition, width 0.5s);
   h4 {
     text-align: center;
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
     font-family: "SourceHanSansCN";
   }
   i {
     position: relative;
-    font-size: 0.5em;
+    font-size: 0.5rem;
     float: right;
-    margin-top: 0.5em;
-    margin-right: -2em;
+    margin-top: 0.5rem;
+    margin-right: -2rem;
     cursor: pointer;
   }
   .article-content-body {
@@ -81,8 +81,8 @@ export default {
     // overflow: hidden;
     text-overflow: ellipsis;//超过文本显示...
     // white-space:nowrap;强制不换行
-    line-height: 2em;
-    font-size: 0.9em;
+    line-height: 2rem;
+    font-size: 0.9rem;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
       "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial,
       sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";

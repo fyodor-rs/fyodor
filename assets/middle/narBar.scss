@@ -1,7 +1,7 @@
 .nav-bar {
   position: fixed;
-  width: 10em;
-  left: calc((100% - 65em) / 2);
+  width: 10rem;
+  left: calc((100% - 65rem) / 2);
   display: flex;
   flex-direction: column;
 }
@@ -17,12 +17,12 @@
     justify-content: left;
     align-items: center;
     color: black;
-    font-size: 0.8em;
+    font-size: 0.8rem;
     @include css3-prefix(transition, color 0.25s);
     &:hover {
       color: rgb(0, 153, 255);
     }
   }
 .space {
-  margin-right: 0.8em;
+  margin-right: 0.8rem;
 }

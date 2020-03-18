@@ -1,10 +1,12 @@
 <template>
   <div class="card">
-<nuxt-link :to="`/article/${article._id}`">
     <div class="card-content">
-      <div class="card-img">
+      <nuxt-link :to="`/article/${article._id}`">
+        <div class="card-img">
           <img draggable="false" :src="image()" />
-      </div>
+        </div>
+      </nuxt-link>
+
       <div class="card-article">
         <div class="card-article-title">
           <nuxt-link :to="`/article/${article._id}`">{{article.title}}</nuxt-link>
@@ -34,7 +36,6 @@
         </div>
       </div>
     </div>
-</nuxt-link>
   </div>
 </template>
 <script>
@@ -51,10 +52,10 @@ export default {
   methods: {
     image() {
       const content = JSON.parse(this.article.rawContent);
-      if (content&&content.entityMap) {
-        return Object.keys(content.entityMap).length&&
-        content.entityMap[0].data.url.indexOf('http')==0&&
-        content.entityMap[0].data.type!=='VIDEO'
+      if (content && content.entityMap) {
+        return Object.keys(content.entityMap).length &&
+          content.entityMap[0].data.url.indexOf("http") == 0 &&
+          content.entityMap[0].data.type !== "VIDEO"
           ? content.entityMap[0].data.url
           : this.defaultPic;
       } else {
@@ -71,7 +72,7 @@ export default {
   width: 100%;
   height: 8.5rem;
   margin-bottom: 1rem;
-  @include css3-prefix(transition, background-color 0.5s);
+  @include css3-prefix(transition, background-color 0.1s);
   &:hover {
     background-color: rgb(219, 218, 218);
     img {
@@ -88,9 +89,9 @@ export default {
       width: 10rem;
       img {
         height: 100%;
-        width: 100%;
+        width: calc(100% + 2px);
         cursor: pointer;
-        @include css3-prefix(transition, transform 0.5s);
+        @include css3-prefix(transition, transform 0.1s);
       }
     }
     .card-article {
@@ -99,7 +100,6 @@ export default {
       width: 26rem;
       color: #555;
       .card-article-title {
-        cursor: pointer;
         font-size: 0.8rem;
         font-weight: 600;
         height: 2rem;
@@ -109,6 +109,7 @@ export default {
         a {
           @include css3-prefix(transition, margin-left 0.25s linear);
           color: #555;
+          cursor: pointer;
           &:hover {
             color: black;
             // text-decoration: underline;
@@ -119,7 +120,7 @@ export default {
       .card-article-description {
         font-size: 0.8rem;
         height: 4.3rem;
-        cursor: pointer;
+        // cursor: pointer;
         // white-space:nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -131,9 +132,9 @@ export default {
         justify-content: space-between;
         span {
           flex: 1;
-          span{
+          span {
             font-size: 0.6rem;
-            font-weight: 400
+            font-weight: 400;
           }
         }
         span:first-child {

@@ -1,12 +1,12 @@
 <template>
   <div class="article">
-    <div class="article-content" :style="{width:isExtend?52.7+'rem':38+'rem'}">
+    <div class="article-content" >
     <h4>
       {{content.title?content.title:''}}
-      <i
+      <!-- <i
         @click="exendPost()"
         :class="[isExtend?'fa fa-chevron-left fa-fw':'fa fa-chevron-right fa-fw']"
-      ></i>
+      ></i> -->
     </h4>
     <div class="article-content-body braft-output-content" v-changeHtml="content.htmlContent?content.htmlContent:''"></div>
     <share></share>
@@ -71,7 +71,7 @@ export default {
     font-size: 0.5rem;
     float: right;
     margin-top: 0.5rem;
-    margin-right: -2rem;
+    margin-right: -1rem;
     cursor: pointer;
   }
   .article-content-body {

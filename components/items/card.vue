@@ -1,14 +1,15 @@
 <template>
   <div class="card">
     <div class="card-content">
-      <nuxt-link :to="`/article/${article._id}`">
+      <!-- <nuxt-link :to="`/article/${article._id}`">
         <div class="card-img">
           <img draggable="false" :src="image()" />
         </div>
-      </nuxt-link>
+      </nuxt-link> -->
 
       <div class="card-article">
         <div class="card-article-title">
+          <span>原创</span>
           <nuxt-link :to="`/article/${article._id}`">{{article.title}}</nuxt-link>
         </div>
         <div class="card-article-description">{{article.describe}}</div>
@@ -70,8 +71,9 @@ export default {
   background-color: rgb(243, 243, 243);
   font-family: "SourceHanSansCN";
   width: 100%;
-  height: 8.5rem;
+  // height: 8.5rem;
   margin-bottom: 1rem;
+  cursor: pointer;
   @include css3-prefix(transition, background-color 0.1s);
   &:hover {
     background-color: rgb(219, 218, 218);
@@ -81,7 +83,8 @@ export default {
   }
   .card-content {
     padding: 0.5rem;
-    height: 7.5rem;
+    padding-left: 1rem;
+    // height: 7.5rem;
     .card-img {
       float: left;
       overflow: hidden;
@@ -96,18 +99,35 @@ export default {
     }
     .card-article {
       height: 100%;
-      float: right;
+      // float: right;
       width: 26rem;
       color: #555;
       .card-article-title {
         font-size: 0.8rem;
         font-weight: 600;
         height: 2rem;
+        display: flex;
+        align-items: center;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        span{
+          display: inline-block;
+          height: 1.2rem;
+          line-height: 1.2rem;
+          width: 2rem;
+          text-align: center;
+          color: white;
+          background: rgba(165, 72, 44, 0.37);
+          border-radius: 1px;
+          margin-right: 1rem;
+          font-family: fontawesome;
+        }
         a {
           @include css3-prefix(transition, margin-left 0.25s linear);
+          font-size: 0.9rem;
+          height: 1.2rem;
+          line-height: 1.2rem;
           color: #555;
           cursor: pointer;
           &:hover {
@@ -119,7 +139,7 @@ export default {
       }
       .card-article-description {
         font-size: 0.8rem;
-        height: 4.3rem;
+        height: 4rem;
         // cursor: pointer;
         // white-space:nowrap;
         overflow: hidden;

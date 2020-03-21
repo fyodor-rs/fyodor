@@ -1,7 +1,11 @@
 .right-bar {
-  width: 14.7rem;
+  // width: 12.5rem;
   // height: 50em;
-  float: right;
+  // position: fixed;
+  // top: 6.6rem;
+  // background-color: gray;
+  // opacity: 0.2;
+  // float: right;
   @include css3-prefix(transition, width 0.5s);
   img{
     // opacity: 0.5;

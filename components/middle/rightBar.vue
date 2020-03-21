@@ -1,6 +1,6 @@
 <template>
-  <div  class="right-bar" :style="{width:isExtend?0+'rem':14.7+'rem'}">
-    <img draggable="false" :src="bingPic" />
+  <div  class="right-bar" >
+    <!-- <img draggable="false" :src="bingPic" /> -->
   </div>
 </template>
 <script>

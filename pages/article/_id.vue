@@ -54,12 +54,15 @@ export default {
 <style lang="scss" >
 .article{
   width: 100%;
+  
   .article-content {
+  min-height: 50rem;
   width: 100%;
   padding: 1.5rem 2rem;
   box-sizing: border-box;
   // border-radius: 10px;
-  background-color: rgb(243, 243, 243);
+  // background-color: rgb(243, 243, 243);
+  background-color: white;
   @include css3-prefix(transition, width 0.5s);
   h4 {
     text-align: center;

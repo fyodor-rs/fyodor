@@ -2,11 +2,12 @@
   <div>
     <!-- <transition name="fade" mode="out-in"> -->
     <!-- <transition-group key="list" name="fade" tag="div"> -->
+      <diV class="lantern"></div>
     <card :key="article._id" :article="article" v-for="article in articles" />
     <div class="paging">
       <button class="button">
         <i class="fa fa-envira fa-fw"></i>
-        <span class="button-word"><span>下一页</span></span>
+        <span class="button-word"><span>加载更多</span></span>
       </button>
     </div>
     <!-- </transition-group> -->
@@ -39,6 +40,12 @@ export default {
   background-color: white;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
+}
+.lantern{
+  width: 100%;
+  height: 15rem;
+  background-color: gray;
+  margin-bottom: 1rem;
 }
 .paging {
   width: 100%;
@@ -77,20 +84,20 @@ export default {
       span{
         display: inline-block;
         position: relative;
-        top: -3.2rem;
-        left: -0.1rem;
+        // top: -3.2rem;
+        // left: -0.1rem;
       }
-      &::before {
-        content: "";
-        display: inline-block;
-        position: relative;
-        bottom: 0.8rem;
-        right: 3.27rem;
-        height: 5rem;
-        width: 0.9rem;
-        background-color: rgb(231, 228, 228);
-        transform: rotate(18deg);
-      }
+      // &::before {
+      //   content: "";
+      //   display: inline-block;
+      //   position: relative;
+      //   bottom: 0.8rem;
+      //   right: 3.27rem;
+      //   height: 5rem;
+      //   width: 0.9rem;
+      //   background-color: rgb(231, 228, 228);
+      //   transform: rotate(18deg);
+      // }
     }
   }
 }

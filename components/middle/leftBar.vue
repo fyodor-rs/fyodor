@@ -34,6 +34,18 @@
         <span class="item-index">1</span>
         <span class="item-title">54213</span>
       </div>
+       <div class="rank-item">
+        <span class="item-index">1</span>
+        <span class="item-title">54213</span>
+      </div>
+       <div class="rank-item">
+        <span class="item-index">1</span>
+        <span class="item-title">54213</span>
+      </div>
+       <div class="rank-item">
+        <span class="item-index">1</span>
+        <span class="item-title">54213</span>
+      </div>
     </div>
 
     <div class="tag">
@@ -121,7 +133,8 @@ export default {
     font-size: 0.9rem;
     width: 100%;
     // height: 15rem;
-    background-color: rgb(243, 243, 243);
+    // background-color: rgb(243, 243, 243);
+    background-color: white;
     // padding: 0.6rem;
     box-sizing: border-box;
     margin-bottom: 1rem;

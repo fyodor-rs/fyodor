@@ -85,7 +85,7 @@ export default {
         display: inline-block;
         position: relative;
         bottom: 0.8rem;
-        right: 3.25rem;
+        right: 3.27rem;
         height: 5rem;
         width: 0.9rem;
         background-color: rgb(231, 228, 228);

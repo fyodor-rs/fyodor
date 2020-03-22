@@ -1,15 +1,15 @@
 <template>
   <div class="card">
     <div class="card-content">
-      <!-- <nuxt-link :to="`/article/${article._id}`">
+      <nuxt-link :to="`/article/${article._id}`">
         <div class="card-img">
           <img draggable="false" :src="image()" />
         </div>
-      </nuxt-link> -->
+      </nuxt-link>
 
       <div class="card-article">
         <div class="card-article-title">
-          <span>原创</span>
+          <!-- <span>原创</span> -->
           <nuxt-link :to="`/article/${article._id}`">{{article.title}}</nuxt-link>
         </div>
         <div class="card-article-description">{{article.describe}}</div>
@@ -68,23 +68,28 @@ export default {
 </script>
 <style lang="scss" scope>
 .card {
-  background-color: rgb(243, 243, 243);
-  font-family: "SourceHanSansCN";
+  // background-color: rgb(243, 243, 243);
+  background-color: #fff;
+  // font-family: "SourceHanSansCN";
   width: 100%;
-  // height: 8.5rem;
+  height: 8.5rem;
   margin-bottom: 1rem;
   cursor: pointer;
-  @include css3-prefix(transition, background-color 0.1s);
+  box-shadow: 0 1px 1px 0 rgba(31, 35, 46, 0.15);
+  // border-radius: 10px;
+  @include css3-prefix(transition, all 0.3s);
   &:hover {
-    background-color: rgb(219, 218, 218);
+     transform: translate(0px, -2px);
+    box-shadow: 0 15px 45px -10px rgba(10, 16, 34, .2);
+    // background-color: rgb(219, 218, 218);
+    
     img {
-      @include css3-prefix(transform, translateX(-2px));
+      // @include css3-prefix(transform, translateX(-2px));
     }
   }
   .card-content {
     padding: 0.5rem;
-    padding-left: 1rem;
-    // height: 7.5rem;
+    height: 7.5rem;
     .card-img {
       float: left;
       overflow: hidden;
@@ -99,9 +104,9 @@ export default {
     }
     .card-article {
       height: 100%;
-      // float: right;
-      width: 26rem;
-      color: #555;
+      float: right;
+      width: 32rem;
+      // color: #555;
       .card-article-title {
         font-size: 0.8rem;
         font-weight: 600;
@@ -128,16 +133,18 @@ export default {
           font-size: 0.9rem;
           height: 1.2rem;
           line-height: 1.2rem;
-          color: #555;
+          color: rgb(58, 57, 57);
+          font-family: "SourceHanSansCN";
           cursor: pointer;
           &:hover {
-            color: black;
+            // color: black;
             // text-decoration: underline;
             margin-left: 0.5rem;
           }
         }
       }
       .card-article-description {
+        color: black;
         font-size: 0.8rem;
         height: 4rem;
         // cursor: pointer;

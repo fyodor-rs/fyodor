@@ -4,6 +4,10 @@
             <input  />
             <i class="fa fa-list-ul fa-fw"></i>
     </div>-->
+    <!-- <div class="person">
+     <animationTree></animationTree>
+    </div> -->
+
     <div class="rank">
       <div class="title">
         <i class="fa fa-fire fa-fw"></i>
@@ -87,9 +91,11 @@
 </template>
 <script>
 import calendar from '../widgets/calendar'
+import animationTree from '../widgets/animationTree'
 export default {
     components:{
-        calendar
+        calendar,
+        animationTree
     }
 }
 </script>
@@ -103,6 +109,12 @@ export default {
   //   background-color: gray;
 //   height: 100rem;
   margin-left: 1rem;
+.person{
+    width: 100%;
+    height: 20rem;
+    background-color: rgb(243, 243, 243);
+     margin-bottom: 1rem;
+}
   .rank,
   .tag,
   .file {
